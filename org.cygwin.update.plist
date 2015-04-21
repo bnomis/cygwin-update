@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key><string>org.cygwin.rsync</string>
+	<key>WorkingDirectory</key><string>/var/root/src/cygwin</string>
+    <key>Program</key><string>/var/root/src/cygwin/cygwin.py</string>
+    <key>RunAtLoad</key><true/>
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>0</integer>
+        <key>Minute</key>
+        <integer>10</integer>
+    </dict>
+    <key>StandardOutPath</key><string>/var/root/logs/cygwin-stdout.log</string>
+    <key>StandardErrorPath</key><string>/var/root/logs/cygwin-stderr.log</string>
+</dict>
+</plist>
+
