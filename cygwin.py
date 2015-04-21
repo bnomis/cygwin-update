@@ -117,10 +117,10 @@ def cygwin_update(options):
 
 
 def main(argv):
-    program_name = 'macports'
+    program_name = 'cygwin'
     usage_string = '%(prog)s [options]'
     version_string = '%(prog)s %(version)s' % {'prog': program_name, 'version': __version__}
-    description_string = 'macports: updates the installed macports'
+    description_string = 'cygwin: updates local mirror of cygwin'
 
     parser = argparse.ArgumentParser(
         prog=program_name,
