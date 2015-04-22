@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Label</key><string>org.cygwin.update</string>
-	<key>WorkingDirectory</key><string>/var/root/src/cygwin</string>
+	<key>WorkingDirectory</key><string>/var/root/src/cygwin-update</string>
     <key>Program</key><string>/var/root/src/cygwin/cygwin.py</string>
     <key>RunAtLoad</key><true/>
     <key>StartCalendarInterval</key>
