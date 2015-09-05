@@ -9,6 +9,7 @@ import os
 import os.path
 import subprocess
 
+
 def launchctl_unload(path):
     argv = ['launchctl', 'unload', path]
     try:
@@ -22,15 +23,16 @@ def launchctl_unload(path):
         if stderr:
             print(stderr.decode().strip())
         p.wait()
-        
+
+
 def uninstall():
-    
+
     fn = 'org.cygwin.update.plist'
     destdir = '/Library/LaunchDaemons'
     dest = os.path.join(destdir, fn)
-    
+
     launchctl_unload(dest)
-    
+
     try:
         os.remove(dest)
     except Exception as e:
@@ -39,4 +41,3 @@ def uninstall():
 
 if __name__ == '__main__':
     uninstall()
-

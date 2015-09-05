@@ -50,7 +50,7 @@ def write_log(options, log, exception=None):
     if options.dry_run:
         print(log)
         return
-    
+
     with open(logfile, 'a') as fp:
         fp.write(log + '\n')
         if exception:
@@ -61,7 +61,7 @@ def run_cmd(options, argv):
     if options.dry_run:
         print(' '.join(argv))
         return
-    
+
     try:
         p = subprocess.Popen(argv, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     except Exception as e:
@@ -106,12 +106,11 @@ def cygwin_update(options):
     write_log(options, '\n------------')
     write_log(options, 'Starting update %s' % datetime.datetime.now())
 
-
     for a in archs:
         sync_arch(options, a)
 
     chown(options)
-    
+
     write_log(options, 'Ending update %s' % datetime.datetime.now())
     write_log(options, '------------\n')
 
@@ -134,7 +133,6 @@ def main(argv):
         action='version',
         version=version_string
     )
-    
 
     parser.add_argument(
         '--dry-run',
@@ -142,7 +140,7 @@ def main(argv):
         action='store_true',
         default=False
     )
-    
+
     options = parser.parse_args(argv)
 
     cygwin_update(options)
@@ -155,4 +153,3 @@ def run():
 
 if __name__ == '__main__':
     run()
-

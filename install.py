@@ -9,6 +9,7 @@ import os
 import os.path
 import subprocess
 
+
 def launchctl_load(path):
     argv = ['launchctl', 'load', '-w', path]
     try:
@@ -23,6 +24,7 @@ def launchctl_load(path):
             print(stderr.decode().strip())
         p.wait()
 
+
 def install():
     pwd = os.path.abspath(os.path.dirname(__file__))
     fn = 'org.cygwin.update.plist'
@@ -36,6 +38,6 @@ def install():
     else:
         launchctl_load(dest)
 
+
 if __name__ == '__main__':
     install()
-

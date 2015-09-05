@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 '''
-mirrors.py: 
+mirrors.py:
 - download list of cygwin rsync mirrors
 - time download setup.bz2 from each mirror
 - print results
 
-Requires: 
+Requires:
 - BeautifulSoup
 - requests
 '''
@@ -83,4 +83,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
