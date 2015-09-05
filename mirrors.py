@@ -15,11 +15,10 @@ import requests
 import time
 
 
-def get_mirrors():
-    timeout_time = 30
+def get_mirrors(timeout=30):
     url = 'https://cygwin.com/mirrors.html'
     try:
-        r = requests.get(url, timeout=timeout_time)
+        r = requests.get(url, timeout=timeout)
     except Exception as e:
         print('get_mirrors: exception in get for %s: %s' % (url, e))
         return ''
@@ -40,12 +39,11 @@ def as_http(url):
     return url.replace('rsync://', 'http://')
 
 
-def download_setup(rsync):
+def download_setup(rsync, timeout=30):
     f = 'x86_64/setup.bz2'
     url = as_http(rsync) + f
-    timeout_time = 30
     try:
-        r = requests.get(url, timeout=timeout_time)
+        r = requests.get(url, timeout=timeout)
     except Exception as e:
         print('download_setup: exception in get for %s: %s' % (url, e))
         return False
