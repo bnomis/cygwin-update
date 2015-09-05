@@ -28,7 +28,7 @@ def get_mirrors():
 
 def get_rsyncs(mirrors):
     rsyncs = []
-    soup = BeautifulSoup(mirrors)
+    soup = BeautifulSoup(mirrors, 'html.parser')
     for link in soup.find_all('a'):
         u = link.get('href')
         if u and u.find('rsync') == 0:
