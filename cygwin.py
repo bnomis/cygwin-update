@@ -27,7 +27,7 @@ logfile = '/var/root/logs/cygwin.log'
 
 # mirror to rsync from
 # see mirrors.py for help choosing a mirror
-mirror = 'rsync://rsync.gtlib.gatech.edu/cygwin'
+mirror = 'rsync://mirror.steadfast.net/cygwin'
 
 # architectures to mirror
 # add x86 to the list if you want it
