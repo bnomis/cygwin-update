@@ -5,11 +5,10 @@
 	<key>Label</key><string>org.cygwin.update</string>
 	<key>WorkingDirectory</key><string>/var/root/src/cygwin-update</string>
     <key>Program</key><string>/var/root/src/cygwin-update/cygwin.py</string>
-    <key>RunAtLoad</key><true/>
     <key>StartCalendarInterval</key>
     <dict>
         <key>Hour</key>
-        <integer>0</integer>
+        <integer>2</integer>
         <key>Minute</key>
         <integer>10</integer>
     </dict>
@@ -17,4 +16,3 @@
     <key>StandardErrorPath</key><string>/var/root/logs/cygwin-stderr.log</string>
 </dict>
 </plist>
-
