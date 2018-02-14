@@ -20,7 +20,7 @@ curlcmd = '/usr/bin/curl'
 rsyncmd = '/usr/bin/rsync'
 
 # where to write the files
-destdir = '/Volumes/scratch/cygwin'
+destdir = '/Volumes/windows/cygwin'
 
 # where to write logs
 logfile = '/var/root/logs/cygwin.log'
