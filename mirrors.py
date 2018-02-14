@@ -67,9 +67,7 @@ def time_downloads(rsyncs):
 
 
 def sort_rsyncs(rsyncs):
-    def cmp_time(a, b):
-        return cmp(a['time'], b['time'])
-    return sorted(rsyncs, cmp_time)
+    return sorted(rsyncs, key=lambda a: a['time'])
 
 
 def print_results(rsyncs):
