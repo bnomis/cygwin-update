@@ -31,7 +31,7 @@ mirror = 'rsync://mirror.steadfast.net/cygwin'
 
 # architectures to mirror
 # add x86 to the list if you want it
-archs = ['x86_64', ]
+archs = ['noarch', 'x86_64', ]
 
 # user and group to change ownership to after sync
 user = 'simonb'
