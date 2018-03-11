@@ -51,4 +51,3 @@ Mac OS X will, by default, unmount all external disks when there is no user logg
 </dict>
 </plist>
 ```
-
